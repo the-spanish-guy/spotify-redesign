@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Home() {
   return(
-    <SafeAreaView statusBarBackgroundColor="dark" style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView
         scrollEnabled={true}
       >
