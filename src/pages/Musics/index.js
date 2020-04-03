@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, SafeAreaView, Image, ProgressBarAndroid } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 import styles from './styles'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -51,7 +51,8 @@ export  default function Album() {
               flexDirection: "row",
               justifyContent: "space-between",
               width: 160,
-              alignSelf: "center"
+              alignSelf: "center",
+              marginTop: 80
             }}
           >
             <Ionicons name="ios-skip-backward" color="#FFF" size={30} />
@@ -63,14 +64,31 @@ export  default function Album() {
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
-              width: 160,
-              alignSelf: "center"
+              width: "90%",
+              alignSelf: "center",
+              marginTop: 60,
+              marginBottom: 70
             }}
           >
-            <Ionicons name="ios-sync" color="#FFF" size={30} />
-            <Ionicons name="md-share-alt" color="#FFF" size={30} />
-            <Ionicons name="ios-heart-empty" color="#FFF" size={30} />
+            <MaterialIcons name="devices" color="#1db954" size={30} />
+            <Ionicons name="ios-shuffle" color="#656566" size={30} />
+            <Ionicons name="md-repeat" color="#656566" size={30} />
+            <Ionicons name="ios-heart-empty" color="#1db954" size={30} />
           </View>
+      </View>
+
+      <View
+       style={{
+        backgroundColor: "#272727",
+        flexDirection: "row",
+        justifyContent: "center",
+        width: "100%",
+        height: 80,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
+      }}
+      >
+        <Ionicons name="ios-arrow-up" size={30} color="#FFFFFF" style={{marginTop: 8}}/>
       </View>
     </SafeAreaView>
   )
