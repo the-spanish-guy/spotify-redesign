@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Home from './src/pages/Home'
+import Album from './src/pages/Album'
 
 export default function App() {
   return (
@@ -9,7 +10,8 @@ export default function App() {
       <Text>Open up App.js to start working on your app!</Text>
     </View>
     */
-   <Home />
+  //  <Home />
+   <Album />
   );
 }
 
