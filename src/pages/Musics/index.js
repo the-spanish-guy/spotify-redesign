@@ -5,7 +5,7 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 import styles from './styles'
 import { LinearGradient } from 'expo-linear-gradient'
 
-export  default function Album() {
+export default function Musics() {
   return(
     <SafeAreaView style={styles.container}>
       <View style={styles.barActions}>
