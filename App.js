@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Home from './src/pages/Home'
 import Musics from './src/pages/Musics'
 import Album from './src/pages/Album'
+import Artist from './src/pages/Artist'
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
     */
   //  <Home />
   // <Musics />
-   <Album />
+  //  <Album />
+  <Artist />
   );
 }
 
