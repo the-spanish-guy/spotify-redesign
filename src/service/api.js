@@ -212,7 +212,92 @@
   ],
   "podcast": [
     {
-      
+      "nome_podcast": "Podcast FalaDev",
+      "cover_podcast": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d",
+      "podcasts": [
+        {
+          "nome_ep": "FalaDev #20 - CI/CD com React Native, ferramentas e estratégias",
+          "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+        },
+        {
+          "nome_ep": "FalaDev #19 - Como se destacar na carreira? Dicas e técnicas",
+          "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+        },
+        {
+          "nome_ep": "FalaDev #18 - Documentando uma API RESTful, ferramentas e timing",
+          "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+        },
+        {
+          "nome_ep": "FalaDev #17 - Offline First no React Native, como aplicar?",
+          "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+        }
+      ]
+    },
+    {
+      "nome_podcast": "BrazilJS",
+      "cover_podcast": "https://i.scdn.co/image/5bba6e30bca1b94ae57bfa72d4f6c4c0325de148",
+      "podcasts": [
+        {
+          "nome_ep": "O’Reilly fecha área de eventos e programa da Mozilla para consertar a internet  – Weekly #336",
+          "cover_ep": "https://i.scdn.co/image/2cb5b48c7c5a0d8a6398984c56099aa8c065d423"
+        },
+        {
+          "nome_ep": "Grunt 1.1, Prettier 2.0, p5.js 1.0 e livro sobre design digital inclusivo – Weekly #335",
+          "cover_ep": "https://i.scdn.co/image/580453afcc94d3ace0a570e210bd894e823edfc4"
+        },
+        {
+          "nome_ep": "GitHub compra o npm e porquê a Web precisa funcionar para mulheres – Weekly #334",
+          "cover_ep": "https://i.scdn.co/image/7e76f379f38f372b20ce9fe9721babbe36859448"
+        },
+        {
+          "nome_ep": "Lib Machine Learning Quântica, Kotlin 1.3.70 e Brave com 4 milhões de users diários – Weekly #333",
+          "cover_ep": "https://i.scdn.co/image/525e27b39ab35ed4f26c44959d4596a3c44a17bd"
+        }
+      ]
+    },
+    {
+      "nome_podcast": "podTag",
+      "cover_podcast": "https://i.scdn.co/image/bdb35d879cd63ee9e4807ce4825a6e743a85bc7e",
+      "podcasts": [
+        {
+          "nome_ep": "⭐ 4x07 - OFFTAG #10: Especial de Fim de Temporada",
+          "cover_ep": "https://i.scdn.co/image/3d729d11b63466fddefb287498e6810c2daef2c8"
+        },
+        {
+          "nome_ep": "4x06 - Tag #41: Métricas de Time",
+          "cover_ep": "https://i.scdn.co/image/b9fe4757b8539aadb8acf1ca801a27960eb6393f"
+        },
+        {
+          "nome_ep": "4x05 - Tag #40: Futuro do Trabalho",
+          "cover_ep": "https://i.scdn.co/image/c2b2bfdb80e73c0695bac3dd48eeeabdddc55fba"
+        },
+        {
+          "nome_ep": "4x04 - Tag #39: Kubernetes",
+          "cover_ep": "https://i.scdn.co/image/d046a1751d13f8d3cfbb6526a553c6140d96358e"
+        }
+      ]
+    },
+    {
+      "nome_podcast": "Lucas Montano Show",
+      "cover_podcast": "https://i.scdn.co/image/626fea3a3dafef9b9d7922012f91913843e47fb6",
+      "podcasts": [
+        {
+          "nome_ep": "Quarentena, programador estudando e desafios",
+          "cover_ep": "https://i.scdn.co/image/4f30190d60b4a79fbd0b5ada775a20df1634fea4"
+        },
+        {
+          "nome_ep": "programador gerando código desnecessário",
+          "cover_ep": "https://i.scdn.co/image/4f30190d60b4a79fbd0b5ada775a20df1634fea4"
+        },
+        {
+          "nome_ep": "Meu maior BUG em Produção (com João Zanella)",
+          "cover_ep": "https://i.scdn.co/image/d5a1a76720178c2bc95d58e33a0c00a97b06d486"
+        },
+        {
+          "nome_ep": "programação é difícil ( poucos conseguem aprender )",
+          "cover_ep": "https://i.scdn.co/image/fa7217bb01e1ce87418cf9e7b3c3043a1260bb75"
+        }
+      ]
     }
   ]
 }
