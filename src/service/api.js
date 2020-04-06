@@ -368,11 +368,32 @@ function loadMusicasMaisOuvidas() {
   ]
 }
 
-function loadPlayslists() {
+function loadPlayslistsSugeridas() {
   return [
     {
       "nome_playlist": "El Bloque",
       "cover_playlist": "https://i.scdn.co/image/ab67706f000000020a18b35fdd8700e9ed79b763"
+    },
+    {
+      "nome_playlist": "La Casa del Perreo",
+      "cover_playlist": "https://i.scdn.co/image/ab67706f0000000265db5237123c3313e2c6bb42"
+    },
+    {
+      "nome_playlist": "Perrear y Llorar",
+      "cover_playlist": "https://i.scdn.co/image/ab67706f00000002a487591daf566ed5d770bc78"
+    },
+    {
+      "nome_playlist": "Perreo City",
+      "cover_playlist": "https://i.scdn.co/image/ab67706f000000025ce4369247411c8dd463f55b"
+    }
+  ]
+}
+
+function loadPlayslistsSeguidas() {
+  return [
+    {
+      "nome_playlist": "Músicas de estimação",
+      "cover_playlist": "https://mosaic.scdn.co/640/ab67616d0000b273ac532a02e0484fa9745c6e44ab67616d0000b273d6f3549d11dabc88a250a6deab67616d0000b273ea33199478fac9f6331a2827ab67616d0000b273f7b11af89b8bd08c29a30b42"
     },
     {
       "nome_playlist": "La Casa del Perreo",
@@ -411,7 +432,11 @@ function loadPodcasts() {
           "nome_ep": "FalaDev #17 - Offline First no React Native, como aplicar?",
           "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
         }
-      ]
+      ],
+      "ultimo_lancamento": {
+        "nome_ep": "FalaDev #20 - CI/CD com React Native, ferramentas e estratégias",
+        "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+      }
     },
     {
       "nome_podcast": "BrazilJS",
@@ -433,7 +458,11 @@ function loadPodcasts() {
           "nome_ep": "Lib Machine Learning Quântica, Kotlin 1.3.70 e Brave com 4 milhões de users diários – Weekly #333",
           "cover_ep": "https://i.scdn.co/image/525e27b39ab35ed4f26c44959d4596a3c44a17bd"
         }
-      ]
+      ],
+      "ultimo_lancamento":{
+        "nome_ep": "O’Reilly fecha área de eventos e programa da Mozilla para consertar a internet  – Weekly #336",
+        "cover_ep": "https://i.scdn.co/image/2cb5b48c7c5a0d8a6398984c56099aa8c065d423"
+      }
     },
     {
       "nome_podcast": "podTag",
@@ -455,7 +484,11 @@ function loadPodcasts() {
           "nome_ep": "4x04 - Tag #39: Kubernetes",
           "cover_ep": "https://i.scdn.co/image/d046a1751d13f8d3cfbb6526a553c6140d96358e"
         }
-      ]
+      ],
+      "ultimo_lancamento": {
+        "nome_ep": "⭐ 4x07 - OFFTAG #10: Especial de Fim de Temporada",
+        "cover_ep": "https://i.scdn.co/image/3d729d11b63466fddefb287498e6810c2daef2c8"
+      }
     },
     {
       "nome_podcast": "Lucas Montano Show",
@@ -477,9 +510,45 @@ function loadPodcasts() {
           "nome_ep": "programação é difícil ( poucos conseguem aprender )",
           "cover_ep": "https://i.scdn.co/image/fa7217bb01e1ce87418cf9e7b3c3043a1260bb75"
         }
-      ]
+      ],
+      "ultimo_lancamento": {
+        "nome_ep": "Quarentena, programador estudando e desafios",
+        "cover_ep": "https://i.scdn.co/image/4f30190d60b4a79fbd0b5ada775a20df1634fea4"
+      }
     }
   ]
 }
 
-export { loadData, loadPodcasts, loadMusicasMaisOuvidas, loadPlayslists }
+function loadPodcastsMaisOuvidas() {
+  return [
+    {
+      "nome_podcast": "Podcast FalaDev",
+      "nome_ep": "FalaDev #20 - CI/CD com React Native, ferramentas e estratégias",
+      "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+    },
+    {
+      "nome_podcast": "podTag",
+      "nome_ep": "⭐ 4x07 - OFFTAG #10: Especial de Fim de Temporada",
+      "cover_ep": "https://i.scdn.co/image/3d729d11b63466fddefb287498e6810c2daef2c8"
+    },
+    {
+      "nome_podcast": "Podcast FalaDev",
+      "nome_ep": "FalaDev #17 - Offline First no React Native, como aplicar?",
+      "cover_ep": "https://i.scdn.co/image/9b225b3d47d9f0a152309ae9ac7050b1370fff4d"
+    },
+    {
+      "nome_podcast": "BrazilJS",
+      "nome_ep": "GitHub compra o npm e porquê a Web precisa funcionar para mulheres – Weekly #334",
+      "cover_ep": "https://i.scdn.co/image/7e76f379f38f372b20ce9fe9721babbe36859448"
+    },
+    {
+      "nome_podcast": "Lucas Montano Show",
+      "nome_ep": "programador gerando código desnecessário",
+      "cover_ep": "https://i.scdn.co/image/4f30190d60b4a79fbd0b5ada775a20df1634fea4",
+    }
+  ]
+}
+
+
+
+export { loadData, loadPodcasts, loadPodcastsMaisOuvidas, loadMusicasMaisOuvidas, loadPlayslistsSugeridas, loadPlayslistsSeguidas }
