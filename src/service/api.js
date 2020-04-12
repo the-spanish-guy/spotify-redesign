@@ -1,6 +1,7 @@
 function loadData() {
   return [
     {
+      "id": 1,
       "nome_artista": "Bad Bunny",
       "albums": [
         {
@@ -124,6 +125,7 @@ function loadData() {
       }
     },
     {
+      "id":2,
       "nome_artista": "Healy",
       "albums": [
         {
@@ -206,6 +208,7 @@ function loadData() {
       }
     },
     {
+      "id": 3,
       "nome_artista": "Mansionz",
       "albums": [
         {
@@ -270,6 +273,7 @@ function loadData() {
       }
     },
     {
+      "id": 4,
       "nome_artista": "Tove Lo",
       "albums": [
         {
@@ -371,18 +375,22 @@ function loadMusicasMaisOuvidas() {
 function loadPlayslistsSugeridas() {
   return [
     {
+      "id": 1,
       "nome_playlist": "El Bloque",
       "cover_playlist": "https://i.scdn.co/image/ab67706f000000020a18b35fdd8700e9ed79b763"
     },
     {
+      "id": 2,
       "nome_playlist": "La Casa del Perreo",
       "cover_playlist": "https://i.scdn.co/image/ab67706f0000000265db5237123c3313e2c6bb42"
     },
     {
+      "id": 3,
       "nome_playlist": "Perrear y Llorar",
       "cover_playlist": "https://i.scdn.co/image/ab67706f00000002a487591daf566ed5d770bc78"
     },
     {
+      "id": 4,
       "nome_playlist": "Perreo City",
       "cover_playlist": "https://i.scdn.co/image/ab67706f000000025ce4369247411c8dd463f55b"
     }
