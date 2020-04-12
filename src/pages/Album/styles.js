@@ -6,8 +6,11 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "#121315",
   },
-  coverAlbum: {
+  returnIcon: {
     marginTop: Constants.statusBarHeight + 20,
+    marginHorizontal: 20
+  },
+  coverAlbum: {
     width: "100%",
     height: 400,
     justifyContent: "center",

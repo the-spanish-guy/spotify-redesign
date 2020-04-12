@@ -15,13 +15,13 @@ const MostHeardSongs = () => {
   const navigation = useNavigation()
   
   function navigateToMusic(idArtistas, nome_album, nome_musica) {
-    console.log('teste: ', idArtistas)
-
+    
     const data = {
       idArtistas,
       nome_album,
       nome_musica
     }
+    console.log('teste: ', data)
     
     navigation.navigate('Musics', { data })
   }

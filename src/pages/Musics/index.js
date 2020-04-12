@@ -14,38 +14,27 @@ export default function Musics() {
   const data = loadData()
   const { idArtistas, nome_album, nome_musica } = route.params.data
   const  artistData = data.find(e => e.idArtistas === idArtistas)
-  const albumData = artistData.albums.map(
-    a => {
-      const data = {
-        nome_album: '',
-        cover_album: ''
-      }
-      if(a.nome_album === nome_album) {
-        data.nome_album = nome_album,
-        data.cover_album = a.cover_album
-      }
-      return data
-    })
-
+  const albumData = artistData.albums.find(a => a.nome_album === nome_album)
+  const singleData = artistData.single.find(a => a.nome_single === nome_musica)
+  console.log('TESTTSTETS: ',singleData)
   const dataToShow = {
     nome_musica,
-    cover_album: albumData[0].cover_album,
+    cover_album: albumData ? albumData.cover_album : singleData.cover_single,
     nome_album,
     nome_artista: artistData.nome_artista
   }
-  console.log(dataToShow)
-
+    
   const navigation = useNavigation()
 
   function navigateBack() {
     navigation.goBack()
   }
 
-  function navigateToAlbum(id, album) {
+  function navigateToAlbum(id, album, musica) {
     console.log('teste2')
     const albumData = {
       id,
-      album
+      album: album ? album : musica
     }
     navigation.navigate('Album', { albumData })
   }
@@ -54,7 +43,7 @@ export default function Musics() {
     <SafeAreaView style={styles.container}>
       <View style={styles.barActions}>
         <Ionicons onPress={navigateBack} name="ios-arrow-down" color="#FFF" size={20} />
-          <TouchableWithoutFeedback onPress={() => navigateToAlbum( idArtistas, dataToShow.nome_album )}>
+          <TouchableWithoutFeedback onPress={() => navigateToAlbum( idArtistas, dataToShow.nome_album, dataToShow.nome_musica )}>
             <Text style={{color:"#FFF", textAlign: "center"}}>
               Tocando do Álbum {"\n"}
                 {dataToShow.nome_album ? dataToShow.nome_album : dataToShow.nome_musica}

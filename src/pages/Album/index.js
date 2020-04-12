@@ -15,27 +15,65 @@ export default function Home() {
   const { id, album } = route.params.albumData
 
   const getDataArtist = data.find(artistName => artistName.idArtistas === id ? artistName.nome_artista: '')
-  const getDataAlbum = getDataArtist.albums.map(
-    a => {
-      if(a.nome_album !== album) return
-      const show = {
-        coverAlbum: a.cover_album,
-        musics: a.musicas
-      }
-      return show
-  })
+  const getDataAlbum = getDataArtist.albums.find(a => a.nome_album === album)
+  const getDataSingle = getDataArtist.single.find(s => s.nome_single === album)
 
-  const dataToshow = {
+  console.log('teste album: ', getDataAlbum)
+  const dataToShow = {
     nome_artista: getDataArtist.nome_artista,
     album,
-    cover_album: getDataAlbum[0].coverAlbum,
-    musicas: getDataAlbum[0].musics
+    cover_album: getDataAlbum ? getDataAlbum.cover_album: getDataSingle.cover_single,
+    musicas: getDataAlbum ? getDataAlbum.musicas : getDataSingle.nome_single
+  }
+console.log('tupo: ', typeof dataToShow.musicas)
+
+  function navigateBack() {
+    console.log('asadsdgsdtf')
+    navigation.goBack()
   }
 
-  console.log('teste album: ', dataToshow)
+  function renderAlbum() {
+    if(Array.isArray(dataToShow.musicas)) {
+      return (
+        dataToShow.musicas.map(
+          (item) =>
+              <View 
+                style={{
+                  height: 80,
+                  flexDirection: "row",
+                  paddingHorizontal: 24,
+                  justifyContent: "space-between",
+                  alignItems: "center"
+                }}
+                key={item.id}
+              >
+                <View>
+                  <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>{item.nome}</Text>
+                  <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>{item.feat}</Text>
+                </View>
+              <Ionicons name="ios-more" size={24} color="#FFFFFF" />
+            </View>
+          )
+      )
+    }
 
-  function navigteBack() {
-    navigation.goBack()
+    return (
+      <View 
+          style={{
+            height: 80,
+            flexDirection: "row",
+            paddingHorizontal: 24,
+            justifyContent: "space-between",
+            alignItems: "center"
+          }}
+        >
+          <View>
+            <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>{dataToShow.musicas}</Text>
+            <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>{dataToShow.nome_artista}</Text>
+          </View>
+        <Ionicons name="ios-more" size={24} color="#FFFFFF" />
+      </View>
+    )
   }
 
   return(
@@ -44,13 +82,15 @@ export default function Home() {
         scrollEnabled={true}
       >
 
+        <Ionicons style={styles.returnIcon} onPress={navigateBack} name="ios-arrow-down" size={24} color="#FFFFFF" />
+
         <View style={styles.coverAlbum} >
 
-          <Image source={{uri: dataToshow.cover_album}}
+          <Image source={{uri: dataToShow.cover_album}}
             style={styles.imgTopBar}
           />
-          <Text style={{color: "#FFFFFF", marginTop: 28, marginHorizontal: 20, fontWeight: "bold", fontSize: 20}}>{dataToshow.album}</Text>
-          <Text style={{color: "#b0b0b1", marginHorizontal: 20, fontWeight: "bold"}}>{dataToshow.nome_artista}</Text>
+          <Text style={{color: "#FFFFFF", marginTop: 28, marginHorizontal: 20, fontWeight: "bold", fontSize: 20}}>{dataToShow.album}</Text>
+          <Text style={{color: "#b0b0b1", marginHorizontal: 20, fontWeight: "bold"}}>{dataToShow.nome_artista}</Text>
 
         </View>
         <View
@@ -88,26 +128,8 @@ export default function Home() {
           </View> */}
 
           {
-            dataToshow.musicas.map(
-              ({ nome, feat, id }) =>
-                  <View 
-                    style={{
-                      height: 80,
-                      flexDirection: "row",
-                      paddingHorizontal: 24,
-                      justifyContent: "space-between",
-                      alignItems: "center"
-                    }}
-                    key={id}
-                  >
-                    <View>
-                      <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>{nome}</Text>
-                      <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>{feat}</Text>
-                    </View>
-                   <Ionicons name="ios-more" size={24} color="#FFFFFF" />
-                </View>
-              )
-            }
+            renderAlbum()
+          }
             
 
           {/* <View 
