@@ -110,78 +110,9 @@ console.log('tupo: ', typeof dataToShow.musicas)
             <Ionicons name="md-download" size={24} color="#1db954" />
           </View>
 
-          {/* <View 
-            style={{
-              height: 80,
-              flexDirection: "row",
-              paddingHorizontal: 24,
-              justifyContent: "space-between",
-              alignItems: "center"
-            }}
-          >
-            <View>
-              <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>Si Veo a Tu Mamá</Text>
-              <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>Bad Bunny</Text>
-            </View>
-            
-            <Ionicons name="ios-more" size={24} color="#FFFFFF" />
-          </View> */}
-
           {
             renderAlbum()
           }
-            
-
-          {/* <View 
-            style={{
-              height: 80,
-              flexDirection: "row",
-              paddingHorizontal: 24,
-              justifyContent: "space-between",
-              alignItems: "center"
-            }}
-          >
-            <View>
-              <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>Pero Ya No</Text>
-              <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>Bad Bunny</Text>
-            </View>
-            
-            <Ionicons name="ios-more" size={24} color="#FFFFFF" />
-          </View>
-
-          <View 
-            style={{
-              height: 80,
-              flexDirection: "row",
-              paddingHorizontal: 24,
-              justifyContent: "space-between",
-              alignItems: "center"
-            }}
-          >
-            <View>
-              <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>la Santa</Text>
-              <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>Bad Bunny</Text>
-            </View>
-            
-            <Ionicons name="ios-more" size={24} color="#FFFFFF" />
-          </View>
-
-          <View 
-            style={{
-              height: 80,
-              flexDirection: "row",
-              paddingHorizontal: 24,
-              justifyContent: "space-between",
-              alignItems: "center"
-            }}
-          >
-            <View>
-              <Text style={{color: "#FFFFFF",fontWeight: "bold", fontSize: 20}}>Yo Perreo Sola</Text>
-              <Text style={{color: "#b0b0b1", fontWeight: "bold"}}>Bad Bunny</Text>
-            </View>
-            
-            <Ionicons name="ios-more" size={24} color="#FFFFFF" />
-          </View> */}
 
       </ScrollView>
     </SafeAreaView>
