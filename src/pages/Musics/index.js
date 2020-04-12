@@ -27,13 +27,13 @@ export default function Musics() {
       return data
     })
 
-    const dataToShow = {
-      nome_musica,
-      cover_album: albumData[0].cover_album,
-      nome_album,
-      nome_artista: artistData.nome_artista
-    }
-    console.log(dataToShow)
+  const dataToShow = {
+    nome_musica,
+    cover_album: albumData[0].cover_album,
+    nome_album,
+    nome_artista: artistData.nome_artista
+  }
+  console.log(dataToShow)
 
   const navigation = useNavigation()
 
@@ -41,15 +41,20 @@ export default function Musics() {
     navigation.goBack()
   }
 
-  function navigateToAlbum() {
+  function navigateToAlbum(id, album) {
     console.log('teste2')
+    const albumData = {
+      id,
+      album
+    }
+    navigation.navigate('Album', { albumData })
   }
 
   return(
     <SafeAreaView style={styles.container}>
       <View style={styles.barActions}>
         <Ionicons onPress={navigateBack} name="ios-arrow-down" color="#FFF" size={20} />
-          <TouchableWithoutFeedback onPress={() => navigateToAlbum()}>
+          <TouchableWithoutFeedback onPress={() => navigateToAlbum( idArtistas, dataToShow.nome_album )}>
             <Text style={{color:"#FFF", textAlign: "center"}}>
               Tocando do Álbum {"\n"}
                 {dataToShow.nome_album ? dataToShow.nome_album : dataToShow.nome_musica}
