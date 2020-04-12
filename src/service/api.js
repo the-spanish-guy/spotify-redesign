@@ -241,26 +241,31 @@ function loadData() {
       ],
       "single": [
         {
+          "id": 1,
           "nome_single": "Soy El Diablo (Remix)",
           "ano_lancamento": "2019",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273429056794d00e4dced7ac558"
         },
         {
+          "id": 2,
           "nome_single": "Vete",
           "ano_lancamento": "2019",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273c016a0629154588021d76cd7"
         },
         {
+          "id": 3,
           "nome_single": "Ignorantes",
           "ano_lancamento": "2020",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273427b8b4d04aef8ed09293b87"
         },
         {
+          "id": 4,
           "nome_single": "LOYAL (feat. Drake and Bad Bunny) [Remix]",
           "ano_lancamento": "2020",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b2735022fdd919432a678029168c"
         },
         {
+          "id": 5,
           "nome_single": "LOYAL (feat. Drake and Bad Bunny) [Remix]",
           "ano_lancamento": "2020",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273d591a1338ebe3e0ca58022f5"
@@ -275,7 +280,7 @@ function loadData() {
             "0": "Si Veo a Tu Mamá",
             "1": "La Difícil",
             "2": "Pero Ya No",
-            "3": "La Santa by Bad Bunny & Daddy Yankee",
+            "3": "La Santa",
             "4": "Yo Perreo Sola",
             "5": "Bichiyal by Bad Bunny & Yaviah",
             "6": "Soliá",
@@ -375,31 +380,37 @@ function loadData() {
       ],
       "single": [
         {
+          "id": 1,
           "nome_single": "$150 / Roll Widdit",
           "ano_lancamento": "2015",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273447773f14b46614f6f2ea018"
         },
         {
+          "id": 2,
           "nome_single": "Phantoms",
           "ano_lancamento": "2016",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273249824282d436c61d76f6547"
         },
         {
+          "id": 3,
           "nome_single": "Slalom (feat. PLC)",
           "ano_lancamento": "2016",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273a5637ec28aecc1284c1f2254"
         },
         {
+          "id": 4,
           "nome_single": "Winse",
           "ano_lancamento": "2016",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273922dcdf0016b5714d84d8102"
         },
         {
+          "id": 5,
           "nome_single": "Tucson",
           "ano_lancamento": "2019",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273d8ce26912aed0e55bec81039"
         },
         {
+          "id": 6,
           "nome_single": "Nikes On",
           "ano_lancamento": "2020",
           "cover_single": "https://i.scdn.co/image/ab67616d0000b273b1d40f40ef2d158ce51b9235"
@@ -706,7 +717,7 @@ function loadMusicasMaisOuvidas() {
       "nome_artista": "Bad Bunny",
       "nome_album": "YHLQMDLG",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b273548f7ec52da7313de0c5e4a0",
-      "nome_musica": "La Santa by Bad Bunny & Daddy Yankee",
+      "nome_musica": "La Santa",
     }
   ]
 }
