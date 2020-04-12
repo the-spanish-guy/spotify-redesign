@@ -1,27 +1,60 @@
 import React from 'react'
-import { View, Text, SafeAreaView, Image, ProgressBarAndroid } from 'react-native'
+import { View, Text, SafeAreaView, Image, ProgressBarAndroid, TouchableWithoutFeedback } from 'react-native'
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 import styles from './styles'
 import { LinearGradient } from 'expo-linear-gradient'
 import { useRoute, useNavigation } from '@react-navigation/native'
 
+import { loadData } from '../../service/api'
+
 export default function Musics() {
-  
   const route = useRoute()
-  const dataMusics = route.params.dataMusics
-  
+
+  const data = loadData()
+  const { idArtistas, nome_album, nome_musica } = route.params.data
+  const  artistData = data.find(e => e.idArtistas === idArtistas)
+  const albumData = artistData.albums.map(
+    a => {
+      const data = {
+        nome_album: '',
+        cover_album: ''
+      }
+      if(a.nome_album === nome_album) {
+        data.nome_album = nome_album,
+        data.cover_album = a.cover_album
+      }
+      return data
+    })
+
+    const dataToShow = {
+      nome_musica,
+      cover_album: albumData[0].cover_album,
+      nome_album,
+      nome_artista: artistData.nome_artista
+    }
+    console.log(dataToShow)
+
   const navigation = useNavigation()
 
   function navigateBack() {
     navigation.goBack()
   }
 
+  function navigateToAlbum() {
+    console.log('teste2')
+  }
+
   return(
     <SafeAreaView style={styles.container}>
       <View style={styles.barActions}>
         <Ionicons onPress={navigateBack} name="ios-arrow-down" color="#FFF" size={20} />
-        <Text style={{color:"#FFF", textAlign: "center"}}>Tocando do Álbum {"\n"}{dataMusics.nome_album ? dataMusics.nome_album : dataMusics.nome_musica}</Text>
+          <TouchableWithoutFeedback onPress={() => navigateToAlbum()}>
+            <Text style={{color:"#FFF", textAlign: "center"}}>
+              Tocando do Álbum {"\n"}
+                {dataToShow.nome_album ? dataToShow.nome_album : dataToShow.nome_musica}
+            </Text>
+          </TouchableWithoutFeedback>
         <Ionicons name="md-more" color="#FFF" size={20} />
       </View>
 
@@ -33,7 +66,7 @@ export default function Musics() {
           alignSelf: "center",
           marginTop: 40
         }} >
-        <Image source={{uri:dataMusics.cover_album}}
+        <Image source={{uri: dataToShow.cover_album}}
         style={{
           width: "100%",
           height: "100%"
@@ -44,8 +77,8 @@ export default function Musics() {
           end={{ x: 0, y: 1 }}
           style={{width: "100%", height: "100%", marginTop: "-100%"}}
         ></LinearGradient>
-        <Text style={{color: "#FFFFFF", marginTop: "-28%", marginHorizontal: 20, fontWeight: "bold", fontSize: 20}}>{dataMusics.nome_musica}</Text>
-        <Text style={{color: "#b0b0b1", marginHorizontal: 20, fontWeight: "bold"}}>{dataMusics.nome_artista}</Text>
+        <Text style={{color: "#FFFFFF", marginTop: "-28%", marginHorizontal: 20, fontWeight: "bold", fontSize: 20}}>{dataToShow.nome_musica}</Text>
+        <Text style={{color: "#b0b0b1", marginHorizontal: 20, fontWeight: "bold"}}>{dataToShow.nome_artista}</Text>
       </View>
 
       <View style={{

@@ -11,7 +11,7 @@ const PlaylistsMusics = () => {
       <Text style={{color: "#FFF", paddingBottom: 40, fontSize: 20, marginLeft: 20, marginTop: 40}}>Playlist para você</Text>
       <FlatList
         data={playlist_sugeridas}
-        keyExtractor={({ id }) => id}
+        keyExtractor={(item) => item.id}
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (

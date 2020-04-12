@@ -8,19 +8,22 @@ import { useNavigation } from '@react-navigation/native'
 
 const mais_ouvidas = loadMusicasMaisOuvidas()
 
+import { loadData } from '../../../service/api'
+const musics = loadData()
 
 const MostHeardSongs = () => {
   const navigation = useNavigation()
   
-  function navigateToMusic(nome_musica, cover_album, nome_artista, nome_album) {
-    console.log('teste')
-    const dataMusics ={
-      nome_musica,
-      cover_album,
-      nome_artista,
-      nome_album
+  function navigateToMusic(idArtistas, nome_album, nome_musica) {
+    console.log('teste: ', idArtistas)
+
+    const data = {
+      idArtistas,
+      nome_album,
+      nome_musica
     }
-    navigation.navigate('Musics', { dataMusics })
+    
+    navigation.navigate('Musics', { data })
   }
 
   return (
@@ -29,9 +32,9 @@ const MostHeardSongs = () => {
 
       {
         mais_ouvidas.map(
-          ({ nome_musica, cover_album, nome_artista, nome_album }) =>
+          ({ nome_musica, cover_album, nome_artista, idArtistas, nome_album }) =>
           <TouchableWithoutFeedback
-            onPress={() => navigateToMusic(nome_musica, cover_album, nome_artista, nome_album)}
+            onPress={() => navigateToMusic(idArtistas, nome_album, nome_musica)}
           >
             <View style={styles.mostListenedToContainerChild}>
               <Image source={{ uri: cover_album }} style={styles.mostListenedToImage}/>

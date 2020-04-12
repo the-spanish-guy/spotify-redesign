@@ -14,7 +14,7 @@ const ReleasesMusics = () => {
       <Text style={[styles.mpChild, styles.otherTitlesFocused]}>Lançamentos</Text>
       <FlatList
         data={artistas}
-        keyExtractor={({ id }) => id}
+        keyExtractor={(item) => item.idArtistas}
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={({ item, index }) => (
