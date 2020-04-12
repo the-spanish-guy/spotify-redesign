@@ -1,7 +1,7 @@
 function loadData() {
   return [
     {
-      "id": 1,
+      "idArtistas": 1,
       "nome_artista": "Bad Bunny",
       "albums": [
         {
@@ -125,7 +125,7 @@ function loadData() {
       }
     },
     {
-      "id":2,
+      "idArtistas":2,
       "nome_artista": "Healy",
       "albums": [
         {
@@ -208,7 +208,7 @@ function loadData() {
       }
     },
     {
-      "id": 3,
+      "idArtistas": 3,
       "nome_artista": "Mansionz",
       "albums": [
         {
@@ -273,7 +273,7 @@ function loadData() {
       }
     },
     {
-      "id": 4,
+      "idArtistas": 4,
       "nome_artista": "Tove Lo",
       "albums": [
         {
@@ -334,36 +334,42 @@ function loadData() {
 function loadMusicasMaisOuvidas() {
   return [
     {
+      "idArtistas": 4,
       "nome_artista": "Tove Lo",
       "nome_album": "BLUE LIPS (lady wood phase II)",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b2735a032c46b63b202e76ebaffe",
       "nome_musica": "struggle"
     },
     {
+      "idArtistas": 3,
       "nome_artista": "Mansionz",
       "nome_album": "Mansionz",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b27390d0e1eb630b1595d23a1a0e",
       "nome_musica": "Gorgeous"
     },
     {
+      "idArtistas": 2,
       "nome_artista": "Healy",
       "nome_album": "",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b273b1d40f40ef2d158ce51b9235",
       "nome_musica": "Nikes On",
     },
     {
+      "idArtistas": 1,
       "nome_artista": "Bad Bunny",
       "nome_album": "",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b273c016a0629154588021d76cd7",
       "nome_musica": "Vete",
     },
     {
+      "idArtistas": 1,
       "nome_artista": "Bad Bunny",
       "nome_album": "",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b273d591a1338ebe3e0ca58022f5",
       "nome_musica": "LOYAL (feat. Drake and Bad Bunny) [Remix]",
     },
     {
+      "idArtistas": 1,
       "nome_artista": "Bad Bunny",
       "nome_album": "YHLQMDLG",
       "cover_album": "https://i.scdn.co/image/ab67616d0000b273548f7ec52da7313de0c5e4a0",
@@ -401,7 +407,29 @@ function loadPlayslistsSeguidas() {
   return [
     {
       "nome_playlist": "Músicas de estimação",
-      "cover_playlist": "https://mosaic.scdn.co/640/ab67616d0000b273ac532a02e0484fa9745c6e44ab67616d0000b273d6f3549d11dabc88a250a6deab67616d0000b273ea33199478fac9f6331a2827ab67616d0000b273f7b11af89b8bd08c29a30b42"
+      "cover_playlist": "https://mosaic.scdn.co/640/ab67616d0000b273ac532a02e0484fa9745c6e44ab67616d0000b273d6f3549d11dabc88a250a6deab67616d0000b273ea33199478fac9f6331a2827ab67616d0000b273f7b11af89b8bd08c29a30b42",
+      "musicas": {
+        "0": "Si Veo a Tu Mamá",
+        "1": "La Difícil",
+        "2": "Pero Ya No",
+        "3": "La Santa by Bad Bunny & Daddy Yankee",
+        "4": "Yo Perreo Sola",
+        "5": "Bichiyal by Bad Bunny & Yaviah",
+        "6": "Soliá",
+        "7": "La Zona",
+        "8": "Qué Malo by Bad Bunny & Ñengo Flow",
+        "9": "Vete",
+        "10": "Ignorantes by Bad Bunny & Sech",
+        "11": "A Tu Merced",
+        "12": "Una Vez by Bad Bunny & Mora",
+        "13": "Safaera by Bad Bunny, Jowell & Randy & Ñengo Flow",
+        "14": "25/8",
+        "15": "Está Cabrón Ser Yo by Bad Bunny & Anuel AA",
+        "16": "Puesto Pa' Guerrial by Bad Bunny & Myke Towers",
+        "17": "P FKN R by Bad Bunny, Kendo Kaponi & Arcángel",
+        "18": "Hablamos Mañana by Bad Bunny, Duki & Pablo Chill-E",
+        "19": "˂3"
+      }
     },
     {
       "nome_playlist": "La Casa del Perreo",
