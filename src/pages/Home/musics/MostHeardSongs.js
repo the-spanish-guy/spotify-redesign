@@ -12,9 +12,15 @@ const mais_ouvidas = loadMusicasMaisOuvidas()
 const MostHeardSongs = () => {
   const navigation = useNavigation()
   
-  function navigateToMusic() {
+  function navigateToMusic(nome_musica, cover_album, nome_artista, nome_album) {
     console.log('teste')
-    navigation.navigate('Musics')
+    const dataMusics ={
+      nome_musica,
+      cover_album,
+      nome_artista,
+      nome_album
+    }
+    navigation.navigate('Musics', { dataMusics })
   }
 
   return (
@@ -23,9 +29,9 @@ const MostHeardSongs = () => {
 
       {
         mais_ouvidas.map(
-          ({ nome_musica, cover_album, nome_artista }) =>
+          ({ nome_musica, cover_album, nome_artista, nome_album }) =>
           <TouchableWithoutFeedback
-            onPress={() => navigateToMusic()}
+            onPress={() => navigateToMusic(nome_musica, cover_album, nome_artista, nome_album)}
           >
             <View style={styles.mostListenedToContainerChild}>
               <Image source={{ uri: cover_album }} style={styles.mostListenedToImage}/>

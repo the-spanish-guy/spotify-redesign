@@ -4,13 +4,24 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 import styles from './styles'
 import { LinearGradient } from 'expo-linear-gradient'
+import { useRoute, useNavigation } from '@react-navigation/native'
 
 export default function Musics() {
+  
+  const route = useRoute()
+  const dataMusics = route.params.dataMusics
+  
+  const navigation = useNavigation()
+
+  function navigateBack() {
+    navigation.goBack()
+  }
+
   return(
     <SafeAreaView style={styles.container}>
       <View style={styles.barActions}>
-        <Ionicons name="ios-arrow-down" color="#FFF" size={20} />
-        <Text style={{color:"#FFF", textAlign: "center"}}>Tocando do Álbum {"\n"}YHLQMDLG</Text>
+        <Ionicons onPress={navigateBack} name="ios-arrow-down" color="#FFF" size={20} />
+        <Text style={{color:"#FFF", textAlign: "center"}}>Tocando do Álbum {"\n"}{dataMusics.nome_album ? dataMusics.nome_album : dataMusics.nome_musica}</Text>
         <Ionicons name="md-more" color="#FFF" size={20} />
       </View>
 
@@ -22,7 +33,7 @@ export default function Musics() {
           alignSelf: "center",
           marginTop: 40
         }} >
-        <Image source={{uri:'https://i.scdn.co/image/ab67616d0000b273548f7ec52da7313de0c5e4a0'}}
+        <Image source={{uri:dataMusics.cover_album}}
         style={{
           width: "100%",
           height: "100%"
@@ -33,8 +44,8 @@ export default function Musics() {
           end={{ x: 0, y: 1 }}
           style={{width: "100%", height: "100%", marginTop: "-100%"}}
         ></LinearGradient>
-        <Text style={{color: "#FFFFFF", marginTop: "-28%", marginHorizontal: 20, fontWeight: "bold", fontSize: 20}}>A Tu Merced</Text>
-        <Text style={{color: "#b0b0b1", marginHorizontal: 20, fontWeight: "bold"}}>Bad Bunny</Text>
+        <Text style={{color: "#FFFFFF", marginTop: "-28%", marginHorizontal: 20, fontWeight: "bold", fontSize: 20}}>{dataMusics.nome_musica}</Text>
+        <Text style={{color: "#b0b0b1", marginHorizontal: 20, fontWeight: "bold"}}>{dataMusics.nome_artista}</Text>
       </View>
 
       <View style={{
